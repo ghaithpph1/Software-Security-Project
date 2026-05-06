@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Denied — SWE210</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f4f6f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            width: 440px;
+            text-align: center;
+        }
+        .icon { font-size: 70px; margin-bottom: 20px; }
+        h1 { color: #922b21; font-size: 26px; margin-bottom: 8px; }
+        .code { color: #aaa; font-size: 14px; margin-bottom: 20px; }
+        p { color: #7f8c8d; font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+        .note {
+            background: #fdecea;
+            border-left: 4px solid #e74c3c;
+            padding: 14px 16px;
+            border-radius: 6px;
+            text-align: left;
+            font-size: 13px;
+            color: #922b21;
+            margin-bottom: 25px;
+        }
+        .note strong { display: block; margin-bottom: 6px; }
+        .back-btn {
+            display: inline-block;
+            background: #2980b9;
+            color: white;
+            padding: 11px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="icon">⛔</div>
+        <h1>Access Denied</h1>
+        <p class="code">HTTP 403 — Forbidden</p>
+        <p>You do not have permission to view this page. This area is restricted to administrators only.</p>
+        <div class="note">
+            <strong>How RBAC works here:</strong>
+            The system checked your role in the database. Your role is <strong>"user"</strong>, not <strong>"admin"</strong>. Access to this page requires the admin role, so the request was automatically rejected.
+        </div>
+        <a href="/dashboard" class="back-btn">← Back to Dashboard</a>
+    </div>
+</body>
+</html>

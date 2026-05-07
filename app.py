@@ -12,7 +12,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 bcrypt = Bcrypt(app)
 
-ENCRYPTION_KEY = Fernet.generate_key()
+ENCRYPTION_KEY = b'ZmDfcTF7_60GrrY167zsiPd67pEvs0aJ_rW1RCDkFMM='
 cipher = Fernet(ENCRYPTION_KEY)
 
 
